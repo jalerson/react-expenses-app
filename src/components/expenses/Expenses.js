@@ -10,6 +10,7 @@ export default function Expenses(props) {
         title={props.expenses[i].title}
         date={props.expenses[i].date}
         amount={props.expenses[i].amount}
+        key={i}
       />
     );
   }

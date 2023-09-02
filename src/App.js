@@ -1,4 +1,5 @@
 import Expenses from "./components/expenses/Expenses";
+import NewExpense from './components/newExpense/newExpense';
 
 function App() {
   const expenses = [
@@ -23,8 +24,13 @@ function App() {
     },
   ];
 
+  const onSubmit = (newExpense) => {
+    expenses.push(newExpense);
+  }
+
   return (
     <div>
+      <NewExpense onSubmit={onSubmit} />
       <Expenses expenses={expenses} />
     </div>
   );
