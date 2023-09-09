@@ -24,12 +24,10 @@ export default function Expenses(props) {
   }
   
   return (
-    <div>
+    <Card className="expenses">
       <p>The selected year is {selectedYear}</p>
       <ExpenseFilter onChange={onChangeFilter} />
-      <Card className="expenses">
-        {expenses}
-      </Card>
-    </div>
+      {expenses}
+    </Card>
   )
 }
