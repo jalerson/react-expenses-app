@@ -22,7 +22,7 @@ export default function ExpenseForm(props) {
     props.onSubmit({
       title: userInput.title,
       amount: userInput.amount,
-      date: userInput.date,
+      date: new Date(userInput.date),
     });
 
     setUserInput({
